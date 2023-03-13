@@ -5,3 +5,4 @@ def multiple_returns(sentence):
         new_tup = (length, sentence[0],)
     else:
         new_tup = (lenght, "None",)
+    return new_tup
