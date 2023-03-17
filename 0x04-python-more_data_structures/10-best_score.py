@@ -7,4 +7,4 @@ def best_score(a_dictionary):
                 _max = j
                 item = i
         return a_dictionary[item]
-    return None
+    return
