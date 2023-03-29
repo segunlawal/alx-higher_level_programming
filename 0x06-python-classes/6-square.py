@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""This module defines a square"""
+"""This module defines a square"""
 
 
 class Square:
@@ -53,7 +53,7 @@ class Square:
         else:
             for _ in range(self.position[1]):
                 print()
-            for i in range(self.size):
+            for _ in range(self.size):
                 for _ in range(self.position[0]):
                     print(" ", end="")
                 for _ in range(self.size):
