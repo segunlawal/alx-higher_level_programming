@@ -1,11 +1,10 @@
-
 #!/usr/bin/python3
 """"This module defines a square"""
 
 
 class Square:
     """This class defines a square"""
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Initialization method
         Args:
             size: size of the square
@@ -33,9 +32,10 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if isinstance(value, tuple):
+        if isinstance(value, tuple) and len(value) == 2:
             self.__position = value
-        raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
         """Get area of the square
