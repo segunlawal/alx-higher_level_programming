@@ -30,6 +30,7 @@ class Square:
             current square area
         """
         return (self.__size**2)
+
     def my_print(self):
         """Print square"""
         if self.__size == 0:
