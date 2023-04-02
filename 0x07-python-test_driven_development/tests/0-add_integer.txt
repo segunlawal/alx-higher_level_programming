@@ -1,0 +1,31 @@
+The ``add_integer(a, b=98)`` module
+--------------------
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Add two positive numbers
+>>> add_integer(4, 5)
+9
+
+Add two negative integers
+>>> add_integer(-5, -4)
+-9
+
+Add one integer and one float
+>>> add_integer(3.5, 4)
+7
+
+Check if b is a string
+>>> add_integer(13, "4")
+Traceback (most recent call last):
+  	  ...
+TypeError: b must be an integer
+
+Check if a is a string
+>>> add_integer(13, "4")
+Traceback (most recent call last):
+  	  ...
+TypeError: b must be an integer
+
+Check if there is one argument
+>>> add_integer(9)
+107
