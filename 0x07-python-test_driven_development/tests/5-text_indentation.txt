@@ -1,0 +1,32 @@
+The ``text_indentation(text)`` module
+-------------------
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("""   Writing Python tests, is it a chore? Or is it something we should all adore? With every test we write and run: Our code becomes a reliable one.""")
+Writing Python tests, is it a chore?
+<BLANKLINE>
+Or is it something we should all adore?
+<BLANKLINE>
+With every test we write and run:
+<BLANKLINE>
+Our code becomes a reliable one.
+<BLANKLINE>
+
+
+space at the begnning of text
+>>> text_indentation("   Hello.")
+Hello.
+<BLANKLINE>
+
+text is in a list
+>>> text_indentation(["Segun"])
+Traceback (most recent call last):
+          ...
+TypeError: text must be a string
+
+
+text is an integer
+>>> text_indentation(45)
+Traceback (most recent call last):
+	  ...
+TypeError: text must be a string
