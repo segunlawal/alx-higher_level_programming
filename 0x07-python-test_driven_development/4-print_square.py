@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Prints a square"""
 
+
 def print_square(size):
     """Print a square
     Args:
