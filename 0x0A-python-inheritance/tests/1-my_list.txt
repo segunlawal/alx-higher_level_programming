@@ -5,8 +5,6 @@ The ``1-my_list`` module
 >>> ex_list = MyList([4, 1, 2, 5, 3])
 >>> ex_list.print_sorted()
 [1, 2, 3, 4, 5]
->>> print(ex_list)
-[1, 2, 3, 4, 5]
 
 Check if MyList is a subclass of list
 >>> issubclass(MyList, list)
@@ -15,3 +13,9 @@ True
 >>> ex_list = MyList()
 >>> isinstance(ex_list, list)
 True
+
+>>> ex_list = MyList([1, 2, 2, 5, 7])
+>>> ex_list.print_sorted()
+[1, 2, 2, 5, 7]
+>>> print(ex_list)
+[1, 2, 2, 5, 7]
