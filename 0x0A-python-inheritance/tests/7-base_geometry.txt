@@ -1,0 +1,25 @@
+The ``7-base_geometry.py`` module
+-------------------
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("age", 23)
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("age", "23")
+Traceback (most recent call last):
+	    ...
+TypeError: age must be an integer
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("distance", -4)
+Traceback (most recent call last):
+          ...
+ValueError: distance must be greater than 0
+
+
+>>> base = BaseGeometry()
+>>> base.area()
+Traceback (most recent call last):
+          ...
+Exception: area() is not implemented
