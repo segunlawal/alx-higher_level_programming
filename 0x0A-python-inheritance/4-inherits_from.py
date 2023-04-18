@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """contains inherits_from function"""
 
