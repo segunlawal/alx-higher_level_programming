@@ -21,4 +21,4 @@ class TestBaseClass(unittest.TestCase):
 
     def test_id_negative(self):
         b = Base(-21)
-        self.assertEqual(b.id, -21)        
+        self.assertEqual(b.id, -21)
