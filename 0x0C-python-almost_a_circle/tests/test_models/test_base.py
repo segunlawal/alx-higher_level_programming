@@ -18,3 +18,11 @@ class TestBaseClass(unittest.TestCase):
     def test_id_negative(self):
         b = Base(-21)
         self.assertEqual(b.id, -21)
+
+    def test_id_string(self):
+        b = Base("21")
+        self.assertEqual(b.id, "21")
+
+    def test_id_list(self):
+        b = Base([1, 2, 6])
+        self.assertEqual([1, 2, 6], b.id)
