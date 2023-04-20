@@ -48,4 +48,4 @@ class Base:
         if cls.__name__ == "Square":
             dummy_inst = cls(5)
         dummy_inst.update(**dictionary)
-        return dum
+        return dummy_inst
