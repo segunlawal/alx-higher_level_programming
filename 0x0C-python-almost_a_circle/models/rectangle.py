@@ -84,13 +84,26 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns an argument to each attribute"""
-        try:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
-        except IndexError:
-            pass
+        if args:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except IndexError:
+                pass
+        if kwargs:
+            keys = kwargs.keys()
+            if 'id' in keys:
+                self.id = kwargs['id']
+            if 'width' in keys:
+                self.width = kwargs['width']
+            if 'height' in keys:
+                self.height = kwargs['height']
+            if 'x' in keys:
+                self.x = kwargs['x']
+            if 'y' in keys:
+                self.y = kwargs['y']
