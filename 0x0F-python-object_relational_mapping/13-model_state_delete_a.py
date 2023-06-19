@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""script that changes the name of a State object
-from the database hbtn_0e_6_usa
+"""script lists all State objects that contain
+the letter a from the database hbtn_0e_6_usa
 """
 
 from sys import argv
@@ -21,8 +21,11 @@ if __name__ == "__main__":
 
     session = Session()
 
-    state = session.query(State).filter(State.id == 2).first()
-    state.name = "New Mexico"
+    query = session.query(State).order_by(State.id)
+    letter = 'a'
+    for state in query:
+        if letter.lower() in state.lower():
+            session.delete(state)
     session.commit()
     session.close()
     engine.dispose()
