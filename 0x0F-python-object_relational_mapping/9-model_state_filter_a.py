@@ -26,3 +26,6 @@ if __name__ == "__main__":
     for state in query:
         if letter.lower() in state.lower():
             print(f"{state.id}: {state.name}")
+    session.commit()
+    session.close()
+    engine.dispose()
