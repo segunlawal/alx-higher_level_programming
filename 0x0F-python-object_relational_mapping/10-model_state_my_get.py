@@ -21,8 +21,8 @@ if __name__ == "__main__":
 
     session = Session()
 
-    query = session.query(State).filter(State.name == argv[4]).first()
-    if query:
-        print('{0}'.format(query.id))
+    state = session.query(State.id).filter(State.name == argv[4]).first()
+    if state:
+        print(state[0])
     else:
         print("Not found")
