@@ -24,3 +24,6 @@ if __name__ == "__main__":
         State.name, City.id, City.name).join(State).order_by(City.id)
     for item in query:
         print(f"{item[0]}: ({item[1]}) {item[2]}")
+
+    session.commit()
+    session.close()
