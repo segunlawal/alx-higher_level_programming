@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python script that fetches URL
+"""Python script that fetches URL"""
 import urllib.request
 
 
