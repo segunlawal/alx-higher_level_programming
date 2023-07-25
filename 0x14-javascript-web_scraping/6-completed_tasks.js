@@ -5,17 +5,18 @@ const url = process.argv[2];
 request(url, (error, response, body) => {
   if (!error) {
     const res = JSON.parse(body);
-    const completed = {};
-    for (const task of res) {
-      if (task.completed) {
-        if (completed[task.userId]) {
-          completed[task.userId] += 1;
+    const tasksCompleted = {};
+    res.forEach((todo) => {
+      const key = todo.userId;
+      if (todo.completed) {
+        if (!tasksCompleted[key]) {
+          tasksCompleted[key] = 1;
         } else {
-          completed[task.userId] = 1;
+          tasksCompleted[key] += 1;
         }
       }
-    }
-    console.log(completed);
+    });
+    console.log(tasksCompleted);
   }
   if (error) console.log(error);
 }
