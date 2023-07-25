@@ -7,7 +7,7 @@ request(url, (error, response, body) => {
 	const res = JSON.parse(body);
 	const completed = {};
     for (const task of res) {
-      if (task.completed === true) {
+      if (task.completed) {
         if (completed[task.userId]) {
           completed[task.userId] += 1;
         } else {
