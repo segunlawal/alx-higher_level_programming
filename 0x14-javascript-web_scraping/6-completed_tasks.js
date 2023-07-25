@@ -3,9 +3,9 @@ const request = require('request');
 const url = process.argv[2];
 
 request(url, (error, response, body) => {
-    if (!error) {
-	const res = JSON.parse(body);
-	const completed = {};
+  if (!error) {
+    const res = JSON.parse(body);
+    const completed = {};
     for (const task of res) {
       if (task.completed) {
         if (completed[task.userId]) {
@@ -16,7 +16,7 @@ request(url, (error, response, body) => {
       }
     }
     console.log(completed);
-    }
-	if (error) console.log(error);
   }
+  if (error) console.log(error);
+}
 );
